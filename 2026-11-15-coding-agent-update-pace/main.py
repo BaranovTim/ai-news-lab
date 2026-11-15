@@ -2,13 +2,9 @@
 # OpenAI Codex CLI, Google Gemini CLI) ship a new stable version, using the
 # public npm registry publish dates.
 # Run: python main.py  (add --refresh to download the registry data again first)
-import json, re, sys, urllib.request
+import json, re, subprocess, sys, urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 
 HERE = Path(__file__).parent
 PACKAGES = {  # short name -> (data file, npm package)
@@ -66,18 +62,29 @@ def main():
     chart(results, start)
 
 
+NICE = {"claude code": "Claude Code", "codex cli": "Codex CLI", "gemini cli": "Gemini CLI"}
+
+
 def chart(results, start):
-    names = list(results["tools"])
-    vals = [results["tools"][n]["stable_releases_last_90d"] for n in names]
-    fig, ax = plt.subplots(figsize=(8, 4.5), dpi=200)
-    bars = ax.bar(names, vals)
-    ax.bar_label(bars, padding=3)
-    ax.set_ylim(0, max(vals) * 1.12)
-    ax.set_ylabel("stable releases")
-    ax.set_title(f"stable npm releases, {start:%b %-d} - {END:%b %-d %Y}".lower())
-    fig.tight_layout()
-    fig.savefig(HERE / "chart.png")
-    print("\nsaved chart.png")
+    # Writes chart.json and draws chart.png with the repo's shared chart style (_style/render.js).
+    tools = results["tools"]
+    lead = max(tools, key=lambda n: tools[n]["stable_releases_last_90d"])
+    month = lambda d: d.strftime("%b").lower()
+    spec = {
+        "test": "001",
+        "type": "bars",
+        "title": "How often do AI coding agents ship updates?",
+        "subtitle": f"Stable releases on npm, {month(start)} {start.day} to {month(END)} {END.day} {END.year}",
+        "data": [{"label": NICE[n], "value": t["stable_releases_last_90d"]} for n, t in tools.items()],
+        "note": {"text": f"about {round(tools[lead]['per_week'])} new versions every week"},
+        "source": "npm registry, stable x.y.z versions only",
+    }
+    (HERE / "chart.json").write_text(json.dumps(spec, indent=2))
+    render = HERE.parent / "_style" / "render.js"
+    try:
+        subprocess.run(["node", str(render), "chart.json", "chart.png"], cwd=HERE, check=True)
+    except (OSError, subprocess.CalledProcessError) as e:
+        print(f"\ncouldn't draw chart.png ({e}). chart.json has the data; see _style/README.md")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,24 @@
+{
+  "test": "001",
+  "type": "bars",
+  "title": "How often do AI coding agents ship updates?",
+  "subtitle": "Stable releases on npm, aug 17 to nov 15 2026",
+  "data": [
+    {
+      "label": "Claude Code",
+      "value": 79
+    },
+    {
+      "label": "Codex CLI",
+      "value": 39
+    },
+    {
+      "label": "Gemini CLI",
+      "value": 13
+    }
+  ],
+  "note": {
+    "text": "about 6 new versions every week"
+  },
+  "source": "npm registry, stable x.y.z versions only"
+}

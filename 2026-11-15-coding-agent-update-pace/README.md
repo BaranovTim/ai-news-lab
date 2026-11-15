@@ -36,6 +36,8 @@ python main.py --refresh  # downloads fresh data from npm first
 
 The cut-off date is fixed, so a refresh gives the same counts unless a version gets removed from npm.
 
+The chart is drawn from `chart.json` by the repo's shared chart style in [`_style/`](../_style), which needs Node and Playwright.
+
 ## Sources
 
 - https://registry.npmjs.org/@anthropic-ai%2fclaude-code
