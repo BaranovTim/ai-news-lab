@@ -27,3 +27,4 @@ python main.py
 
 | Date | Test |
 |------|------|
+| 2026-11-15 | [How often do the big AI coding agents ship updates?](2026-11-15-coding-agent-update-pace) |

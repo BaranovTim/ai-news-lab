@@ -1,0 +1,27 @@
+{
+  "window": "2026-08-17 to 2026-11-15 (90 days)",
+  "rule": "stable versions only (x.y.z), npm publish time",
+  "tools": {
+    "claude code": {
+      "stable_releases_last_90d": 79,
+      "per_week": 6.1,
+      "first_stable_ever": "2025-02-24",
+      "stable_releases_all_time": 567,
+      "latest_in_window": "2026-11-13"
+    },
+    "codex cli": {
+      "stable_releases_last_90d": 39,
+      "per_week": 3.0,
+      "first_stable_ever": "2025-04-16",
+      "stable_releases_all_time": 211,
+      "latest_in_window": "2026-11-13"
+    },
+    "gemini cli": {
+      "stable_releases_last_90d": 13,
+      "per_week": 1.0,
+      "first_stable_ever": "2025-06-25",
+      "stable_releases_all_time": 205,
+      "latest_in_window": "2026-11-10"
+    }
+  }
+}
