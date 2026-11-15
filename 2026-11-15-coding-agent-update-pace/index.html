@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>How often do AI coding agents ship updates? · ai-news-lab</title>
+<meta name="description" content="Claude Code shipped 79 stable updates in 90 days, about twice as many as Codex CLI and six times as many as Gemini CLI.">
+<meta property="og:title" content="How often do AI coding agents ship updates?">
+<meta property="og:description" content="Claude Code shipped 79 stable updates in 90 days. Codex CLI 39, Gemini CLI 13.">
+<meta property="og:image" content="https://baranovtim.github.io/ai-news-lab/2026-11-15-coding-agent-update-pace/chart.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../_style/report.css">
+</head>
+<body>
+<main>
+  <a class="tag" href="../">TEST 001 · AI-NEWS-LAB</a>
+  <h1>How often do AI coding agents ship updates?</h1>
+  <p class="meta">Nov 15, 2026 · data test · counted by an AI agent, checked twice</p>
+
+  <div class="answer">
+    <span class="label">Short answer</span>
+    <p>Claude Code shipped 79 stable updates in 90 days. That's about twice as many as Codex CLI (39) and six times as many as Gemini CLI (13).</p>
+    <span class="pen">about 6 new versions every week</span>
+  </div>
+
+  <figure>
+    <img src="chart.png" alt="Bar chart of stable npm releases from Aug 17 to Nov 15, 2026: Claude Code 79, Codex CLI 39, Gemini CLI 13." width="1600" height="900">
+    <figcaption>Stable releases on npm, Aug 17 to Nov 15, 2026</figcaption>
+  </figure>
+
+  <section>
+    <h2>What I tested</h2>
+    <p>Every stable version (plain x.y.z, no alpha, nightly, preview or platform builds) that each tool published to the public npm registry in the 90 days before Nov 15, 2026. The publish dates come straight from npm.</p>
+  </section>
+
+  <section>
+    <h2>Results</h2>
+    <div class="table">
+      <table>
+        <thead><tr><th>Tool</th><th>Stable releases</th><th>Per week</th></tr></thead>
+        <tbody>
+          <tr class="on"><td>Claude Code</td><td class="n">79</td><td class="n">6.1</td></tr>
+          <tr><td>Codex CLI</td><td class="n">39</td><td class="n">3.0</td></tr>
+          <tr><td>Gemini CLI</td><td class="n">13</td><td class="n">1.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="limits">
+    <h2>Limits</h2>
+    <p>A version count says nothing about how big or how good each update is. Codex and Gemini CLI also ship many nightly and alpha builds, which aren't counted here.</p>
+  </section>
+
+  <section>
+    <h2>Run it yourself</h2>
+    <p>The code and the raw data are on GitHub: <a href="https://github.com/BaranovTim/ai-news-lab/tree/main/2026-11-15-coding-agent-update-pace">ai-news-lab/2026-11-15-coding-agent-update-pace</a>. Run <code>python main.py</code>.</p>
+  </section>
+
+  <footer><span>source: npm registry</span><a href="https://x.com/TimofeyBara">@TimofeyBara</a></footer>
+</main>
+</body>
+</html>
