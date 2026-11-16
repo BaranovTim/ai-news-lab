@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>How much more AI coding fits in one budget? · ai-news-lab</title>
+<meta name="description" content="Microsoft's free TokenEconomizer plugin cuts coding agent costs by 18.4% to 30.9%. In plain terms, the same budget covers 23% to 45% more work.">
+<meta property="og:title" content="How much more AI coding fits in one budget?">
+<meta property="og:description" content="With Microsoft's free TokenEconomizer plugin, the same budget covers 23% to 45% more coding agent work. Biggest gain: Claude Code on Opus 4.8.">
+<meta property="og:image" content="https://baranovtim.github.io/ai-news-lab/2026-11-16-tokeneconomizer-savings/chart.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../_style/report.css">
+</head>
+<body>
+<main>
+  <a class="tag" href="../">TEST 002 · AI-NEWS-LAB</a>
+  <h1>How much more AI coding fits in one budget?</h1>
+  <p class="meta">Nov 16, 2026 · data test · checked by an AI agent against two copies of the numbers</p>
+
+  <div class="answer">
+    <span class="label">Short answer</span>
+    <p>Microsoft's published numbers check out: 18.4% to 30.9% cheaper across 5 setups. Turned around, the same money or usage limit covers 23% to 45% more work, and the most on Claude Code with Opus 4.8.</p>
+    <span class="pen">45% more on Opus</span>
+  </div>
+
+  <figure>
+    <img src="chart.png" alt="Horizontal bar chart of how much more work fits in the same budget with TokenEconomizer: Copilot CLI with Sonnet 5 +23%, Claude Code with Sonnet 5 +31%, Codex with GPT-5.6 Terra +33%, Codex with GPT-5.6 Sol +35%, Claude Code with Opus 4.8 +45%." width="1600" height="900">
+    <figcaption>More work in the same budget, per agent and model, 277 coding tasks each</figcaption>
+  </figure>
+
+  <section>
+    <h2>What I tested</h2>
+    <p>A post about TokenEconomizer, a free plugin from Microsoft and UC Berkeley for Claude Code, Codex and Copilot CLI, went around X today with the claim "18.4% to 30.9% lower cost". I took the five per-setup numbers the project publishes (the paper's Table 1, as plotted in its GitHub repo) and checked them against the numbers written out in its README. Both copies match, and the smallest and biggest saving match the headline.</p>
+    <p>Then I turned "X% cheaper" into the question people actually have: how much more can I get done before I run out? If each task costs 30.9% less, the same budget pays for 1 / (1 - 0.309) = 1.45 times as many tasks, so about 45% more.</p>
+  </section>
+
+  <section>
+    <h2>Results</h2>
+    <div class="table">
+      <table>
+        <thead><tr><th>Setup</th><th>Cheaper</th><th>More work, same budget</th><th>Tasks solved</th></tr></thead>
+        <tbody>
+          <tr><td>Claude Code + Sonnet 5</td><td class="n">23.6%</td><td class="n">+31%</td><td class="n">74.7% → 76.0%</td></tr>
+          <tr class="on"><td>Claude Code + Opus 4.8</td><td class="n">30.9%</td><td class="n">+45%</td><td class="n">74.0% → 73.0%</td></tr>
+          <tr><td>Codex + GPT-5.6 Terra</td><td class="n">24.7%</td><td class="n">+33%</td><td class="n">73.8% → 74.7%</td></tr>
+          <tr><td>Codex + GPT-5.6 Sol</td><td class="n">26.1%</td><td class="n">+35%</td><td class="n">80.1% → 81.7%</td></tr>
+          <tr><td>Copilot CLI + Sonnet 5</td><td class="n">18.4%</td><td class="n">+23%</td><td class="n">75.0% → 77.6%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Tasks solved went up in 4 of 5 setups. The average saving is 24.7%.</p>
+  </section>
+
+  <section class="limits">
+    <h2>Limits</h2>
+    <p>These are Microsoft's own benchmark numbers, not a new run: I checked them and did the math, I didn't rerun 277 tasks. The plugin learns from earlier sessions in the same project, so the savings are for people who keep working in one repo (on brand-new repos the paper reports 6% to 20%). "More work" assumes your usage limit tracks cost, which is close but not exact for subscription plans.</p>
+  </section>
+
+  <section>
+    <h2>Run it yourself</h2>
+    <p>The code and the saved source files are on GitHub: <a href="https://github.com/BaranovTim/ai-news-lab/tree/main/2026-11-16-tokeneconomizer-savings">ai-news-lab/2026-11-16-tokeneconomizer-savings</a>. Run <code>python main.py</code>, or <code>python main.py --refresh</code> to download the numbers from the TokenEconomizer repo again.</p>
+  </section>
+
+  <footer><span>source: TokenEconomizer paper, Table 1, via github.com/microsoft/TokenEconomizer</span><a href="https://x.com/TimofeyBara">@TimofeyBara</a></footer>
+</main>
+</body>
+</html>

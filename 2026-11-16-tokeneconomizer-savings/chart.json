@@ -1,0 +1,36 @@
+{
+  "test": "002",
+  "type": "hbars",
+  "title": "How much more AI coding fits in one budget?",
+  "subtitle": "With Microsoft's free TokenEconomizer plugin, 277 coding tasks per setup",
+  "suffix": "%",
+  "prefix": "+",
+  "decimals": 0,
+  "data": [
+    {
+      "label": "Copilot CLI + Sonnet 5",
+      "value": 22.5
+    },
+    {
+      "label": "Claude Code + Sonnet 5",
+      "value": 30.9
+    },
+    {
+      "label": "Codex + GPT-5.6 Terra",
+      "value": 32.8
+    },
+    {
+      "label": "Codex + GPT-5.6 Sol",
+      "value": 35.3
+    },
+    {
+      "label": "Claude Code + Opus 4.8",
+      "value": 44.7,
+      "highlight": true
+    }
+  ],
+  "note": {
+    "text": "45% more on Opus"
+  },
+  "source": "TokenEconomizer paper, Table 1 (arXiv 2610.22732), via its GitHub repo"
+}

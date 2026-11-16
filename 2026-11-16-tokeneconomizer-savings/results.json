@@ -1,0 +1,59 @@
+{
+  "source": "microsoft/TokenEconomizer README and docs/assets/results_overview.py (the paper's Table 1, arXiv 2610.22732), 277 SWE-Bench tasks, 6 repos",
+  "rule": "more work in the same budget = 1 / (1 - share saved) - 1",
+  "checks": {
+    "headline_range_in_readme": [
+      18.4,
+      30.9
+    ],
+    "range_from_table": [
+      18.4,
+      30.9
+    ],
+    "headline_matches_table": true,
+    "setups_solving_more": 4,
+    "average_cheaper_pct": 24.7
+  },
+  "setups": [
+    {
+      "setup": "Claude Code + Sonnet 5",
+      "cheaper_pct": 23.6,
+      "more_work_same_budget_pct": 30.9,
+      "tasks_solved_before_pct": 74.7,
+      "tasks_solved_after_pct": 76.0,
+      "solved_change_points": 1.3
+    },
+    {
+      "setup": "Claude Code + Opus 4.8",
+      "cheaper_pct": 30.9,
+      "more_work_same_budget_pct": 44.7,
+      "tasks_solved_before_pct": 74.0,
+      "tasks_solved_after_pct": 73.0,
+      "solved_change_points": -1.0
+    },
+    {
+      "setup": "Codex + GPT-5.6 Terra",
+      "cheaper_pct": 24.7,
+      "more_work_same_budget_pct": 32.8,
+      "tasks_solved_before_pct": 73.8,
+      "tasks_solved_after_pct": 74.7,
+      "solved_change_points": 0.9
+    },
+    {
+      "setup": "Codex + GPT-5.6 Sol",
+      "cheaper_pct": 26.1,
+      "more_work_same_budget_pct": 35.3,
+      "tasks_solved_before_pct": 80.1,
+      "tasks_solved_after_pct": 81.7,
+      "solved_change_points": 1.6
+    },
+    {
+      "setup": "Copilot CLI + Sonnet 5",
+      "cheaper_pct": 18.4,
+      "more_work_same_budget_pct": 22.5,
+      "tasks_solved_before_pct": 75.0,
+      "tasks_solved_after_pct": 77.6,
+      "solved_change_points": 2.6
+    }
+  ]
+}
