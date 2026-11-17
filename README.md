@@ -27,5 +27,6 @@ python main.py
 
 | Date | Test |
 |------|------|
+| 2026-11-17 | [Did the people who tried GPT-6.2 like it?](2026-11-17-gpt-6-2-launch-reactions) |
 | 2026-11-16 | [How much more AI coding fits in one budget?](2026-11-16-tokeneconomizer-savings) |
 | 2026-11-15 | [How often do the big AI coding agents ship updates?](2026-11-15-coding-agent-update-pace) |

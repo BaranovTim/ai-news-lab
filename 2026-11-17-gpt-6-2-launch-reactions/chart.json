@@ -1,0 +1,33 @@
+{
+  "test": "003",
+  "type": "hbars",
+  "title": "Did the people who tried GPT-6.2 like it?",
+  "subtitle": "220 English posts on X in the first hours after launch, nov 17 2026, sorted by hand",
+  "data": [
+    {
+      "label": "Praised it, no test",
+      "value": 10
+    },
+    {
+      "label": "Tested, disliked it",
+      "value": 10
+    },
+    {
+      "label": "Tested, mixed",
+      "value": 16
+    },
+    {
+      "label": "Trashed it, no test",
+      "value": 36
+    },
+    {
+      "label": "Tested, liked it",
+      "value": 42,
+      "highlight": true
+    }
+  ],
+  "note": {
+    "text": "62% of testers liked it"
+  },
+  "source": "X search, 3+ likes, 18:58 to 20:36 UTC, news and jokes left out"
+}

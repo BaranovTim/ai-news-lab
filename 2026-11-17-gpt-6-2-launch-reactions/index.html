@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Did the people who tried GPT-6.2 like it? · ai-news-lab</title>
+<meta name="description" content="X called GPT-6.2 OpenAI's worst model within hours. Sorting 220 launch posts shows 42 of the 68 people who showed their own test liked it.">
+<meta property="og:title" content="Did the people who tried GPT-6.2 like it?">
+<meta property="og:description" content="220 launch posts on X sorted by hand: 62% of the people who showed their own test liked GPT-6.2. Most of the trashing came from posts with no test.">
+<meta property="og:image" content="https://baranovtim.github.io/ai-news-lab/2026-11-17-gpt-6-2-launch-reactions/chart.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../_style/report.css">
+</head>
+<body>
+<main>
+  <a class="tag" href="../">TEST 003 · AI-NEWS-LAB</a>
+  <h1>Did the people who tried GPT-6.2 like it?</h1>
+  <p class="meta">Nov 17, 2026 · data test · 220 posts on X sorted by an AI agent</p>
+
+  <div class="answer">
+    <span class="label">Short answer</span>
+    <p>Mostly yes. Of 68 posts where people showed their own test of GPT-6.2, 42 liked it and only 10 didn't. The "worst model ever" posts mostly showed no test at all, and they got about twice the likes.</p>
+    <span class="pen">62% of testers liked it</span>
+  </div>
+
+  <figure>
+    <img src="chart.png" alt="Horizontal bar chart of 220 X posts about GPT-6.2: tested and liked it 42, trashed it with no test 36, tested and mixed 16, tested and disliked it 10, praised it with no test 10." width="1600" height="900">
+    <figcaption>Posts that gave a verdict, by whether the author showed their own test</figcaption>
+  </figure>
+
+  <section>
+    <h2>What I tested</h2>
+    <p>OpenAI released GPT-6.2 Astra and Sol on Nov 17. Within an hour my timeline said it was the worst model OpenAI ever shipped. I wanted to know if that came from people who used it or from people repeating each other.</p>
+    <p>An AI agent pulled every English post on X that named GPT-6.2 (no replies, no reposts, at least 3 likes) from 18:58 to 20:36 UTC, about 1 to 2.5 hours after launch. That's 220 posts. Each one went into one group:</p>
+    <div class="table">
+      <table>
+        <thead><tr><th>Group</th><th>Rule</th></tr></thead>
+        <tbody>
+          <tr><td>Tested (liked / mixed / disliked)</td><td>The author shows or describes their own run: a demo, a timing, a cost, a benchmark they ran, early-access use</td></tr>
+          <tr><td>Trashed it / praised it, no test</td><td>A verdict with no own test shown, including repeating other people's reviews or someone else's benchmark</td></tr>
+          <tr><td>Safety</td><td>About the system card, alignment or cyber testing</td></tr>
+          <tr><td>News</td><td>Launch info, prices, plain benchmark numbers, "now available in", ads</td></tr>
+          <tr><td>Other</td><td>Jokes, questions, "where is my access", posts about the drama</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>I wanted to test it hands-on in ChatGPT too, but it's only for paid plans and my account is on Free.</p>
+  </section>
+
+  <section>
+    <h2>Results</h2>
+    <div class="table">
+      <table>
+        <thead><tr><th>Group</th><th>Posts</th><th>Likes</th></tr></thead>
+        <tbody>
+          <tr class="on"><td>Tested, liked it</td><td class="n">42</td><td class="n">1,211</td></tr>
+          <tr><td>Tested, mixed</td><td class="n">16</td><td class="n">389</td></tr>
+          <tr><td>Tested, disliked it</td><td class="n">10</td><td class="n">240</td></tr>
+          <tr><td>Trashed it, no test</td><td class="n">36</td><td class="n">2,612</td></tr>
+          <tr><td>Praised it, no test</td><td class="n">10</td><td class="n">141</td></tr>
+          <tr><td>Safety</td><td class="n">9</td><td class="n">777</td></tr>
+          <tr><td>News</td><td class="n">55</td><td class="n">1,229</td></tr>
+          <tr><td>Other</td><td class="n">42</td><td class="n">765</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>36 of the 46 negative verdicts (78%) came with no test. The most liked post in the set (1,047 likes) called it "the worst release since the GPT-5 disaster" without showing a run. Most of the people who liked it were showing 3D scenes, games and art, which is what OpenAI said it got better at. Coding complaints mostly pointed at one benchmark where Sol dropped 3 points.</p>
+  </section>
+
+  <section class="limits">
+    <h2>Limits</h2>
+    <p>One AI agent sorted the posts by hand from the first ~200 characters, so some calls are judgment. As a rough second check, a simple keyword rule agreed with the hand sort on 82% of posts, but it misses demo posts that don't say "I". People who post demos lean positive, and X only covers the first hours, so this says what early testers showed, not how good the model is.</p>
+  </section>
+
+  <section>
+    <h2>Run it yourself</h2>
+    <p>The code and every post with its group are on GitHub: <a href="https://github.com/BaranovTim/ai-news-lab/tree/main/2026-11-17-gpt-6-2-launch-reactions">ai-news-lab/2026-11-17-gpt-6-2-launch-reactions</a>. Run <code>python main.py</code>. Change a label in <code>data/posts.tsv</code> if you disagree and see what moves.</p>
+  </section>
+
+  <footer><span>source: X search, posts naming GPT-6.2, Nov 17 2026</span><a href="https://x.com/TimofeyBara">@TimofeyBara</a></footer>
+</main>
+</body>
+</html>

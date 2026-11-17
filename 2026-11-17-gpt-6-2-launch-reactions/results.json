@@ -1,0 +1,86 @@
+{
+  "source": "X search, query (\"GPT-6.2\" OR \"GPT 6.2\" OR \"6.2 Astra\" OR \"6.2 Sol\") lang:en -filter:retweets -filter:replies min_faves:3, Latest, read nov 17 2026 20:36 UTC",
+  "posts": 220,
+  "groups": {
+    "tried_good": {
+      "posts": 42,
+      "likes": 1211
+    },
+    "tried_mixed": {
+      "posts": 16,
+      "likes": 389
+    },
+    "tried_bad": {
+      "posts": 10,
+      "likes": 240
+    },
+    "take_bad": {
+      "posts": 36,
+      "likes": 2612
+    },
+    "take_good": {
+      "posts": 10,
+      "likes": 141
+    },
+    "safety": {
+      "posts": 9,
+      "likes": 777
+    },
+    "news": {
+      "posts": 55,
+      "likes": 1229
+    },
+    "other": {
+      "posts": 42,
+      "likes": 765
+    }
+  },
+  "showed_own_test": 68,
+  "of_testers_liked_pct": 61.8,
+  "of_testers_disliked_pct": 14.7,
+  "bad_verdict_without_test": 36,
+  "share_of_negative_verdicts_without_test_pct": 78.3,
+  "likes_bad_no_test_vs_good_tested": [
+    2612,
+    1211
+  ],
+  "most_liked": [
+    {
+      "user": "kimmonismus",
+      "likes": 1047,
+      "label": "take_bad",
+      "text_start": "GPT-6.2 is the worst release since the GPT-5 disaster"
+    },
+    {
+      "user": "synthwavedd",
+      "likes": 806,
+      "label": "take_bad",
+      "text_start": "Both 6.2 Astra and Sol are regressions on Artificial Analysis' Coding Agent Index"
+    },
+    {
+      "user": "TokenGremlin",
+      "likes": 470,
+      "label": "safety",
+      "text_start": "The system card is out, and they didn't fix all of them"
+    },
+    {
+      "user": "AndrewCurran_",
+      "likes": 272,
+      "label": "news",
+      "text_start": "Epoch says GPT-6.2 Astra continues the trendline"
+    },
+    {
+      "user": "Angaisb_",
+      "likes": 205,
+      "label": "other",
+      "text_start": "I'm completely ignoring X... I'll test them both for a day and report back"
+    }
+  ],
+  "keyword_check": {
+    "posts": 220,
+    "agree": 180,
+    "agree_pct": 81.8,
+    "keyword_says_tried": 28,
+    "hand_says_tried": 68
+  }
+}
